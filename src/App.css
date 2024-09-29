@@ -1,38 +1,155 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task1{
+  height: 150px;
+}
+.heading{
+  color: rgb(165, 42, 42);
+}
+label{
+  font-weight: 600;
+  font-size: medium;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input[type="text"]{
+  margin-left: 20px;
+width: 50%;
+padding: 10px;
+
+  margin: auto;
+  
+}
+ul{
+  list-style:  none;
+  padding: 0px;
+}
+.autocomplete-container{
+   width:50%;
+   max-height: 450px;
+  background-color: rgb(221, 224, 226);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+}
+.autocomplete-container li{
+  border-bottom: solid black 1px;
+  width: 80%;
+  padding: 10px;
+  
+}
+
+.autocomplete-container li:focus{
+  background-color: rgb(144, 144, 152);
+}
+.active {
+  background-color: #d3d3d3; /* A light gray background for highlighting */
+}
+.card-grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  padding: 10px;
+  margin-top: 30px;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-grid{
+    grid-template-columns: auto auto;
+   
+   
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 480px) {
+  .card-grid{
+    grid-template-columns: auto ;
+  
+  }
+}
+
+.grid-item{
+ background-color: rgb(231, 231, 231); 
+ padding: 20px;
+ border-radius: 10px;
+
+
+}
+
+.grid-item:hover{
+  scale: 1.02;
+  background-color: rgb(218, 218, 218);
+}
+.grid-item p{
+  font-size: medium;
+  font-weight: 600;
+  min-height: 40px;
+  height: auto;
+}
+.grid-item button{
+  background-color: rgb(42, 76, 120);
+  color: white;
+  border:none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+.grid-item button:active{
+ background-color: rgb(98, 98, 188);
+
+}
+
+.modal{
+  position: fixed;
+  z-index: 300;
+  right: 0;
+  left: 0;
+  top:0;
+  bottom: 0;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: aqua;
+  background-color: rgb(10, 10, 10,0.8);
+
+}
+
+.modal .content{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+.modal img{
+  margin-top: 30px;
+}
+
+.close{
+  background-color: #231a1a;
+  position: absolute;
+  right: 10px;
+  border: none;
   color: white;
-}
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
